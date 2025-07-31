@@ -99,15 +99,16 @@
       </a>
     </li>
     <li>
-      <a href="mailto:Marcosrooa17@gmail.com" title="Email">
-        <i class="fas fa-envelope"></i>
-        <span>Email</span>
-      </a>
+      <a href="#" title="Email" onclick="mostrarFormulario()">
+  <i class="fas fa-envelope"></i>
+  <span>Email</span>
+</a>
+
     </li>
   </ul>
 
 </section>
-<section class="form-contact">
+<section class="form-contact" id="formulario">
   <h2>Enviar un mensaje</h2>
   <form action="https://formspree.io/f/mpwllrwb" method="POST">
     <input type="text" name="name" placeholder="Tu nombre" required>
@@ -117,9 +118,14 @@
   </form>
 </section>
 
-  <footer>
-    &copy; 2025 Marcos Damian Roa. Todos los derechos reservados.
-  </footer>
+<script>
+  function mostrarFormulario() {
+    const form = document.getElementById("formulario");
+    form.classList.toggle("visible");
+    form.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
 
 </body>
 </html>
